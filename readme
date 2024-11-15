@@ -19,3 +19,18 @@ OPERATOR:
         "-",
         "*",
         "/"
+
+example code:
+
+'''txt
+let x = 42
+let y = 5
+let result = x + y
+print result
+'''
+
+Hello World and Goodbye World code:
+'''txt
+print "Hello World"
+print "Goodbye World"
+'''
