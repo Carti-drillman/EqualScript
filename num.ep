@@ -1,0 +1,4 @@
+let x = 10
+let y = 11
+let result = x + y
+print result

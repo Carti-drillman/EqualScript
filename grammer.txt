@@ -1,0 +1,53 @@
+# Grammar for the EqualScript (EP) Language
+
+# Tokens
+TOKEN = "let" | "print" | "if" | "else" | "while" | "return" | "(" | ")" | ";" | "+" | "-" | "*" | "/" | "="
+       | "number" | "identifier" | "string"
+
+# The program consists of a series of statements
+program = statement* 
+
+# Statements can be variable assignments, print statements, or expressions
+statement = variable_declaration 
+          | print_statement
+          | expression_statement
+
+# Variable declaration (using the "let" keyword)
+variable_declaration = "let" identifier "=" expression ";"
+
+# Print statement
+print_statement = "print" expression ";"
+
+# Expression statement is just an expression followed by a semicolon
+expression_statement = expression ";"
+
+# Expressions can be literals, variables, or binary operations
+expression = literal 
+           | variable
+           | binary_operation
+           | parenthesized_expression
+
+# Literals can either be numbers or strings
+literal = number 
+        | string
+
+# Binary operations (addition, subtraction, multiplication, division)
+binary_operation = expression operator expression
+
+operator = "+" | "-" | "*" | "/"
+
+# Parentheses can be used to group expressions
+parenthesized_expression = "(" expression ")"
+
+# An identifier (for variable names) must be a word starting with a letter or underscore, followed by any combination of letters, digits, or underscores
+identifier = letter (letter | digit | "_")*
+
+# Literals
+number = [0-9]+
+string = '"' ([^"])* '"'
+
+# A letter is a single alphabet character (either lowercase or uppercase)
+letter = [a-zA-Z]
+
+# A digit is any numeric character (0-9)
+digit = [0-9]

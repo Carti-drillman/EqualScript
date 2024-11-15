@@ -1,0 +1,21 @@
+SYNTAXES:
+        "let",
+        "print",
+        "if",
+        "while",
+        "return",
+
+TOKENS:
+        "(",
+        ")",
+        ";",
+        "+",
+        "-",
+        "*",
+        "/"
+
+OPERATOR:
+        "+",
+        "-",
+        "*",
+        "/"
