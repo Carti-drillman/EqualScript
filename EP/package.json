@@ -1,0 +1,25 @@
+{
+  "name": "EP",
+  "displayName": "EqualScript EP",
+  "description": "EqualScript",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ep",
+      "aliases": ["EP programming Language", "ep"],
+      "extensions": [".ep"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ep",
+      "scopeName": "grammer.txt",
+      "path": "./syntaxes/ep.tmLanguage.json"
+    }]
+  }
+}
